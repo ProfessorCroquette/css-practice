@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Practice: Trailhead Coffee</title>
+  <!-- Create a file named style.css next to this one and start styling! -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CHALLENGE: Make the header sticky, with the nav laid out using flexbox -->
+  <header class="site-header">
+    <a href="#" class="logo">Trailhead Coffee</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#menu" class="active">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- CHALLENGE: Center the text, add a background image or gradient, style the button with a hover effect -->
+    <section class="hero">
+      <h1>Small-batch coffee, roasted at altitude.</h1>
+      <p class="tagline">Fresh beans, friendly baristas, and a very comfy couch.</p>
+      <a href="#menu" class="btn btn-primary">See the menu</a>
+      <a href="#contact" class="btn btn-secondary">Visit us</a>
+    </section>
+
+    <!-- CHALLENGE: Turn these cards into a responsive grid (CSS Grid), 3 columns on desktop, 1 on mobile -->
+    <section id="menu" class="menu">
+      <h2>Our Favorites</h2>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-img">☕</div>
+          <h3>Espresso</h3>
+          <p>Rich, bold, and short. The classic way to start the day.</p>
+          <span class="price">$3.00</span>
+        </article>
+        <article class="card featured">
+          <div class="card-img">🥛</div>
+          <h3>Oat Milk Latte</h3>
+          <p>Smooth and creamy with a hint of natural sweetness.</p>
+          <span class="price">$5.50</span>
+          <span class="badge">Best seller</span>
+        </article>
+        <article class="card">
+          <div class="card-img">🧊</div>
+          <h3>Cold Brew</h3>
+          <p>Steeped for 18 hours. Low acid, high energy.</p>
+          <span class="price">$4.75</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- CHALLENGE: Two-column layout: text on the left, image box on the right. Style the blockquote and the first letter -->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <div class="about-layout">
+        <div class="about-text">
+          <p>We opened Trailhead in 2019 with one grinder, one espresso machine, and a lot of optimism. Today we roast every batch ourselves and work directly with farmers in Colombia, Ethiopia, and Guatemala.</p>
+          <p>Every cup tells a story, and we think <em>you</em> should <strong>know</strong> it. Ask us about <a href="#">our sourcing</a> any time.</p>
+          <blockquote>
+            "The best coffee I've had outside of Bogotá."
+            <cite>- A very happy customer</cite>
+          </blockquote>
+        </div>
+        <figure class="about-figure">
+          <div class="placeholder-img">Image goes here</div>
+          <figcaption>Our roastery, early morning.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CHALLENGE: Style the table: zebra stripes (nth-child), collapsed borders, hover row highlight -->
+    <section id="pricing" class="pricing">
+      <h2>Bean Prices</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Origin</th>
+            <th>Roast</th>
+            <th>Tasting notes</th>
+            <th>Price / 250g</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Colombia</td>
+            <td>Medium</td>
+            <td>Caramel, red apple</td>
+            <td>$14</td>
+          </tr>
+          <tr>
+            <td>Ethiopia</td>
+            <td>Light</td>
+            <td>Blueberry, jasmine</td>
+            <td>$17</td>
+          </tr>
+          <tr>
+            <td>Guatemala</td>
+            <td>Dark</td>
+            <td>Dark chocolate, smoke</td>
+            <td>$15</td>
+          </tr>
+          <tr>
+            <td>Sumatra</td>
+            <td>Dark</td>
+            <td>Earthy, cedar</td>
+            <td>$16</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CHALLENGE: Style form inputs, focus states, and the submit button. Try :focus-visible and :invalid -->
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <form action="#" method="post">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>General question</option>
+            <option>Catering</option>
+            <option>Wholesale</option>
+          </select>
+        </div>
+        <fieldset>
+          <legend>How did you hear about us?</legend>
+          <label><input type="radio" name="source" value="friend"> A friend</label>
+          <label><input type="radio" name="source" value="social"> Social media</label>
+          <label><input type="radio" name="source" value="walk"> Walked by</label>
+        </fieldset>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Say hello..."></textarea>
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" name="newsletter"> Send me the monthly newsletter
+        </label>
+        <button type="submit" class="btn btn-primary">Send message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- CHALLENGE: Dark background, multi-column footer with flexbox, style the links and :hover states -->
+  <footer class="site-footer">
+    <div class="footer-col">
+      <h4>Trailhead Coffee</h4>
+      <p>123 Summit Street<br>Boulder, CO 80302</p>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <ul>
+        <li>Mon-Fri: 6am - 6pm</li>
+        <li>Sat-Sun: 7am - 4pm</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+    <p class="copyright">&copy; 2026 Trailhead Coffee. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
